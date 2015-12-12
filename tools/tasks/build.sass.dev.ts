@@ -5,6 +5,6 @@ export = function buildSassDev(gulp, plugins, option) {
   return function () {
     return gulp.src(join(APP_SRC, '**', '*.scss'))
       .pipe(plugins.sass().on('error', plugins.sass.logError))
-      .pipe(gulp.dest(APP_SRC));
+      .pipe(gulp.dest(CSS_DEST));
   };
 }
